@@ -12,7 +12,8 @@ const addNewPost=((req,res)=>{
         category:req.body.category,
         hashtags:req.body.hashtags,
         image: req.file ? req.file.path || req.file.filename : null,
-        datePosted: new Date()
+        datePosted: new Date(),
+        isActive: false 
     })
     newPost.save()
     .then((result)=>{
