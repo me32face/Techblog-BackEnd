@@ -53,7 +53,7 @@ const ViewPostsByUser = ((req,res)=>{
 })
 
 const ViewAllPosts=((req,res)=>{
-    postSchema.find({ isActive: true })
+    postSchema.find()
     .populate("userDetails", "username name")
     .then((result)=>{
         res.json({
