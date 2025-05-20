@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.static(`${__dirname}/upload`));
 
 app.use("/TechBlog",router);
-const port = 3003;
+const port = process.env.PORT || 3003;
 app.listen(port,function(){
     console.log(`Running on ${port}`);
 });
