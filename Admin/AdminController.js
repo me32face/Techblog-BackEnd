@@ -8,6 +8,7 @@ const postSchema = require("../Posts/PostSchema");
 // Admin login handler
 const adminLogin = (req, res) => {
   const { username, password } = req.body;
+  console.log("Received login attempt:", username, password);
 
   if (
     username === process.env.ADMIN_USERNAME &&
