@@ -13,7 +13,6 @@ const addNewPost=((req,res)=>{
         hashtags:req.body.hashtags,
         image: req.file ? req.file.path || req.file.filename : null,
         datePosted: new Date(),
-        isActive: false 
     })
     newPost.save()
     .then((result)=>{
